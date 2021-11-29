@@ -1,0 +1,43 @@
+2021-11-02
+
+Added atom label to atom_info to show different atom groups with different symmetry properties. Enables the 2nd column to describe the atom_label. This help when comparing atom_info with ICSD 3D model.
+
+Added occupency into scattering factor. Integrate occupency when calculating scattering factors for individual atoms, and applied to entire hkl matrix row.
+
+Added a round to the decimals of atom fraction coordinates. This will change 0.004 to 0.00 which can change the atom to be located at the cell surface instead of inside. The decimals errors may due to the float calculation when applying symmetry operations. Including the errors may dut to the generation of CIF file where faction coordinates cannot devided evenly by symmety.
+
+2021-11-03
+
+Added ion scattering tables. Enables identification and extraction of ion scattering factor when checking atom_site_type_symbol.
+    1) Removed 'chemical dictionary.txt' which were previously used to generate chem_dict. It turns out that 'chemical table.txt' could also do the job.
+    2) Replaced neutral atom table from IUCr table Table 4.3.2.2 to Table 6.1.1.4. Latter is the table suggested by Percharsky.
+    3) Added ion scattering table after neutral atom table.
+    4) Improved format of 'chemical table'. Replace all '\t' with space and all '−' with '-'
+
+Improved intensity intergration with 0*n(n*0) initial numpy array. Previously was 1*n(n*1) matrix and need to identify the first and second row(column), which was complex, useless and inefficient.
+
+2021-11-04
+
+Added multi-processing for plotting and applying peak shape functions.
+
+2021-11-05
+
+Added a comment_judge to filter out comment between ';' of cod database.
+
+Fixed an issue that estimated cell atom number is wrong.
+
+Added a judgement to filter out some cases with wrong formated symmetry operations.
+
+2021-11-07
+
+Added a judgement to filter out a, b, c, alpha, beta, gamma, _space_group_IT_number when they are in a wrong format.
+
+2021-11-12
+
+Added a text file as global input file to store inputs.
+
+2021-11-17
+
+Fixed a bug when ";" comment are not a single line. From ";" == line to ";" in line
+
+

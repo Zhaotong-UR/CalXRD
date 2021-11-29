@@ -1,0 +1,17 @@
+cal_mode = draw_cell
+database = cod
+in_dir = archive_cif/cod_archive/1
+out_dir = archive_xrd/1
+log_dir = archive_log
+cif_suffix = .cif
+hkl_max = 5
+2theta_min = 0
+2theta_max = 180
+step
+atom_limit = 400
+wavelength = 1.5418
+temp_factor_b = rand
+peak_shape = gaussian
+U = 0.05
+V = -0.06
+W = 0.07

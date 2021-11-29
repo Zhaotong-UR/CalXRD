@@ -1,0 +1,3 @@
+# Calculation mode. "cell": only build cell & log, "xrd": compute xrd & output & log.
+# Input directory. Path to input cif files. Must be relative path.
+# Output directory. Path to output xrd files. Must be relative path.
